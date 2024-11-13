@@ -9,13 +9,26 @@
   <body>
     <h1>Form Input Data</h1>
     <form id="dataForm">
-      <label for="dataInput">Masukkan Data:</label>
-      <input type="text" id="dataInput" name="data" required />
+      <label for="nameInput">Nama:</label>
+      <input type="text" id="nameInput" name="name" required />
+
+      <label for="addressInput">Alamat:</label>
+      <input type="text" id="addressInput" name="address" required />
+
+      <label for="ageInput">Umur:</label>
+      <input type="number" id="ageInput" name="age" required />
+
+      <label for="heightInput">Tinggi (cm):</label>
+      <input type="number" id="heightInput" name="height" required />
+
+      <label for="weightInput">Berat Badan (kg):</label>
+      <input type="number" id="weightInput" name="weight" required />
+
       <button type="submit">Submit</button>
     </form>
     <div id="output"></div>
 
-    <a href="data.html">detail</a>
+    <a href="data.html" style="margin-top: 20px">All Data</a>
     <script src="script.js"></script>
   </body>
 </html>

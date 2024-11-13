@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
    
          Object.keys(data).forEach(apiKey => {
            const listItem = document.createElement('li');
-           listItem.textContent = `Data ${apiKey}`;
+           listItem.textContent = `${apiKey}`;
            listItem.onclick = () => {
              window.location.href = `/api/data/${apiKey}`;
            };

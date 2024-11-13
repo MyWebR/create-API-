@@ -1,15 +1,15 @@
 // server.js (Backend server dengan Node.js dan Express)
-const express = require('express');
-const bodyParser = require('body-parser');
-const { v4: uuidv4 } = require('uuid');
-const fs = require('fs');
+const express = require("express");
+const bodyParser = require("body-parser");
+const { v4: uuidv4 } = require("uuid");
+const fs = require("fs");
 
 const app = express();
 const PORT = 3000;
-const DATA_FILE = 'data.json';
+const DATA_FILE = "data.json";
 
 app.use(bodyParser.json());
-app.use(express.static('public'));
+app.use(express.static("public"));
 
 // Load existing data from the JSON file
 function loadData() {
@@ -28,7 +28,7 @@ function saveData(data) {
 let dataStorage = loadData();
 
 // Endpoint untuk input data dan membuat API key
-app.post('/api/submit', (req, res) => {
+app.post("/api/submit", (req, res) => {
   const newData = req.body;
   const apiKey = uuidv4(); // Membuat API key unik
 
@@ -37,26 +37,26 @@ app.post('/api/submit', (req, res) => {
   saveData(dataStorage);
 
   res.status(201).json({
-    message: 'Data berhasil disimpan',
+    message: "Data berhasil disimpan",
     apiKey: apiKey,
-    link: `http://localhost:${PORT}/api/data/${apiKey}`
+    link: `http://localhost:${PORT}/api/data/${apiKey}`,
   });
 });
 
 // Endpoint untuk mengakses data berdasarkan API key
-app.get('/api/data/:apiKey', (req, res) => {
+app.get("/api/data/:apiKey", (req, res) => {
   const apiKey = req.params.apiKey;
   const data = dataStorage[apiKey];
 
   if (data) {
     res.json(data);
   } else {
-    res.status(404).json({ message: 'Data tidak ditemukan' });
+    res.status(404).json({ message: "Data tidak ditemukan" });
   }
 });
 
 // Endpoint untuk mengembalikan semua data dalam format JSON
-app.get('/api/all-data', (req, res) => {
+app.get("/api/all-data", (req, res) => {
   res.json(dataStorage);
 });
 
