@@ -1,10 +1,10 @@
-instalisasi
+// instalisasi //
 npm install express body-parser
 
 npm install uuid
 
-run
+// run //
 node server.js
 
-click link localhost in terminal
-and test
+// click link localhost in terminal
+and test //
