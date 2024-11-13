@@ -1,0 +1,66 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"] {
+  padding: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 300px;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#output {
+  margin-top: 20px;
+  color: #28a745;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+}
+
+li:hover {
+  color: darkblue;
+}
